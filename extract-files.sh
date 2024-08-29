@@ -77,9 +77,6 @@ function blob_fixup() {
         vendor/bin/qcc-trd)
             "${PATCHELF_0_17_2}" --replace-needed "libgrpc++_unsecure.so" "libgrpc++_unsecure_prebuilt.so" "${2}"
             ;;
-        vendor/etc/init/init.embmssl_server.rc)
-            sed -i '/interface/d' "${2}"
-            ;;
         vendor/etc/qcril_database/upgrade/config/6.0_config.sql)
             sed -i '/persist.vendor.radio.redir_party_num/ s/true/false/g' "${2}"
             ;;
